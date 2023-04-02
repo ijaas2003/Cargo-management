@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Form{
+   height: 120vh;    
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   position: relative;
+   background-image: url(airway.jpg);
+   background-size: cover;
+z-index: 10;
+}
+.box1234{
+    margin-top: 80px;
+    height: 780px;
+    width: 480px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0,0,0.2);
+    border-radius: 12px;
+}
+.put{
+    padding: 15px;
+}
+.put input{
+    height: 35px;
+    border-radius: 6px;
+    width: 83%;
+    background-color: #fff;
+    padding: 5px 12px;
+    text-align: center;
+    font-size: 15px;
+    border: 0;
+    outline-color: blue;
+    margin-left:32px;
+}
+.put input:active{
+    border-radius: 1px solid blue;
+}
+.input input::placeholder{
+    font-size: 15px;
+}
+.Select{
+    width: 400px;
+    margin-left: 35px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.box1234 h1{
+    color: rgb(3, 9, 95);
+    font-size: 40px;
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sel{
+    width: 82%;
+    margin-left: 8%;
+}

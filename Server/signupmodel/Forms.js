@@ -1,0 +1,138 @@
+const mongoose = require('mongoose');
+const RAILWAY = new mongoose.Schema({
+    Name:{
+        type:String,
+        require:true,
+    },
+    NickName:{
+        type:String,
+        require:true,
+    },
+    Phone:{
+        type:String,
+        require:true,
+    },
+    Email:{
+        type:String,
+        require:true,
+    },
+    Destination:{
+        type:String,
+        require:true,
+    },
+    Dates:{
+        type:String,
+        require:true,
+    },
+    KG:{
+        type:String,
+        require:true,
+    },
+    Text:{
+        type:String,
+        require:true,
+    },
+    Service:{
+        type:String,
+        default:"Railway"
+    }
+})
+mongoose.model("Railways",RAILWAY);
+const AIRWAY = new mongoose.Schema({
+    Name:{
+        type:String,
+        require:true,
+    },
+    NickName:{
+        type:String,
+        require:true,
+    },
+    Phone:{
+        type:String,
+        require:true,
+    },
+    Email:{
+        type:String,
+        require:true,
+    },
+    Destination:{
+        type:String,
+        require:true,
+    },
+    Dates:{
+        type:String,
+        require:true,
+    },
+    KG:{
+        type:String,
+        require:true,
+    },
+    Text:{
+        type:String,
+        require:true,
+    },
+    Service:{
+        type:String,
+        default:"Airway"
+    }
+
+})
+mongoose.model("Airways",AIRWAY);
+const SHIP = new mongoose.Schema({
+    Name:{
+        type:String,
+        require:true,
+    },
+    NickName:{
+        type:String,
+        require:true,
+    },
+    Phone:{
+        type:String,
+        require:true,
+    },
+    Email:{
+        type:String,
+        require:true,
+    },
+    Destination:{
+        type:String,
+        require:true,
+    },
+    Dates:{
+        type:String,
+        require:true,
+    },
+    KG:{
+        type:String,
+        require:true,
+    },
+    Text:{
+        type:String,
+        require:true,
+    },
+    Service:{
+        type:String,
+        default:"Ship"
+    }
+})
+mongoose.model("Ships",SHIP);
+const PAYMENTDATA = new mongoose.Schema({
+    Service:{
+        type:String,
+        require:true,
+    },
+});
+mongoose.model("PaymentDatas",PAYMENTDATA);
+
+const ADMIN = new mongoose.Schema({
+    UserName:{
+        type:String,
+        require:true,
+    },
+    Password:{
+        type:String,
+        require:true,
+    }
+});
+mongoose.model("Admins",ADMIN);

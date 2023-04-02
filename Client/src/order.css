@@ -1,0 +1,137 @@
+.Card-outline{
+    height: 350vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(9, 147, 251);
+    flex-direction: column;
+}
+.first-heads
+{
+    padding:30px;
+    height: 500px;
+    width: 1000px;
+    background-color: #fff;
+    border-radius: 6px;
+    transition: 1s;
+    animation-name: pay;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 0.1s;
+    
+}
+.first-heads::after{
+
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    background: rgb(43, 42, 42);
+    width: 90%;
+    height: 4px;
+    left: 3%;
+    border-radius: 50%;
+    filter: blur(3px);
+}
+.first-heads h5 span{
+    color: rgb(244, 17, 206);
+    text-decoration: underline;
+    cursor: pointer;
+}
+@keyframes pay {
+    0%{
+        transform: translateY(-2px);
+    }
+    25%{
+        transform: translateY(2px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    75%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(-2px);
+    }
+}
+.first-heads h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.first-heads .box-model{
+    display: flex;
+    flex-direction:row;
+}
+.first-heads .box-model .cards
+{
+    height: 320px;
+    width: 270px;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px;
+    background: #fff;
+    border: 1px solid rgb(9, 147, 251);
+    cursor: pointer;
+    transition: 1s;
+}
+.cards i {
+    font-size: 40px;
+    margin-left: 80px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    color: rgb(9, 147, 251);
+    
+}
+.cards .fa-train {
+    font-size: 40px;
+    margin-left: 90px;
+}
+.first-heads .box-model .cards:hover{
+    background-color: rgb(9, 147, 251);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.first-heads .box-model .cards:hover i{
+    color: #fff;
+}
+.first-heads .box-model .cards .see{
+    font-size: 15px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    background-color: rgb(9, 147, 251);
+    color: #fff;
+    border-radius: 5px;
+    border:0;
+    outline: none;
+    transition: 1s;
+}
+.first-heads .box-model .cards:hover .see{
+    background-color: #fff;
+    color:rgb(9, 147, 251);
+    text-decoration: underline;   
+}
+.first-heads .box-model .cards .see:hover{
+box-shadow: 2px 1px 20px 1px rgba(0, 0, 0,0.4);
+}
+.taraffi{
+    width: 80vw;
+    height: 80vh;
+    background-color:rgb(9, 147, 251);
+}
+.tabling{
+    position: absolute;
+    top: 1000px;
+    left: 0;
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    margin-left: 30%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.tabling h3{
+    text-align: center;
+    text-decoration: underline;
+}

@@ -1,0 +1,238 @@
+.Container{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url(./1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition:ease-in-out;
+    animation-name: ani;
+    animation-direction:alternate-reverse;
+    animation-fill-mode:forwards;
+    animation-play-state:running;
+    animation-timing-function:ease-in-out;
+    animation-duration:30s;
+    animation-iteration-count: infinite;
+}
+:root{
+    --primary:rgb(3, 9, 95);
+}
+@keyframes ani{
+    0%{ 
+        background-image: url(./1.jpg);
+    }
+    25%{
+        background-image: url(./2.jpg);
+    }
+    50%{
+        background-image: url(./3.jpg);
+    }
+    75%{
+        background-image: url(./4.jpg);
+    }
+    100%{
+        background-image: url(./1.jpg);
+    }
+}
+
+.Navbar{
+    height: 70px;
+    background-color: rgb(3, 9, 95);
+    position: sticky;
+    top: 0;
+}
+.Navbar ul{
+    padding: 10px;
+    margin-left: 35%;
+}
+.Navbar ul a{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+    
+}
+.Navbar ul a li{
+    list-style: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s;
+}
+.Navbar ul button{
+    margin-left: 30px;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: gold;
+    border: 0;
+    transition:1s;
+    cursor: pointer;
+}
+.Navbar ul a li:hover{
+    color: gold;
+    transform: translateY(-5px);
+}
+.Navbar ul button:hover{
+    box-shadow:1px 1px 30px 5px gold;
+}
+.Center{
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    
+}
+.Center h1{
+    color: rgb(3, 9, 95);
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.Center .Color{
+    color: gold;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+#Footer{
+    height: 80vh;
+    width: 100%;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    background-color: rgb(4, 4, 100);
+}
+.column{
+    color: rgb(4, 4, 100);
+    background-color: rgb(203, 236, 227);
+    height: 70%;
+    width: 70%;
+    margin-left: 17%;
+    border-radius: 12px;
+    padding-top: 4%;
+    margin-top: 5%;
+    position: absolute;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0,0.2);
+    display: flex;
+    flex-direction: row;
+}
+.column .Head{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    text-decoration: underline;
+}
+.column-firt{
+    height: 300px;
+    width: 100px;
+    flex-basis:40%;
+    margin-top: 5%;
+    display: inline;
+    position: relative;
+}
+.column-firt h1 i{
+    font-size: 20px;
+    display: inline;
+    margin-right: 15px;
+    text-align: justify;
+    float: left;
+    margin-left: 15px;
+}
+.column-firt h1{
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 15px;
+    text-align: justify;
+    padding: 10px;
+    margin-right: 40px;
+}
+.column-firt .first{
+    margin-top: 100px;
+    margin-right: 210px;
+}
+.column-second{
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    background: var(--primary);
+    margin-bottom: 10%;
+    top: 5%;
+    right: 15%;
+    height: 370px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 2px 3px 6px 3px rgba(0, 0, 0,0.5);
+}
+.column-second h1{
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 25px;
+    color: #fff;
+}
+.column-second{
+    margin: 10px;
+    padding: 25px;
+}
+.column-second form{
+    height: 100%;
+    width: 100%; 
+}
+.column-second .input{
+    padding:17px 0;
+    display: block;
+}
+.column-second .input input{
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+}
+.column-second .input input::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+}
+.column-second button{
+    margin-top: 6px;
+    padding: 6px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s;
+    border: 0;
+    outline: none;
+}
+.column-second button:hover{
+    background-color: gold;
+    box-shadow:1px 1px 30px 5px gold;
+    color: var(--primary);
+    transform: translateY(-4px);
+}
+.reveals{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+}
+.reveals.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.column-second .input textarea{
+    padding: 10px 10px;
+    border-radius: 12px;
+    border:0;
+    cursor: pointer;
+    outline: 0;
+}
+.column-second .input textarea::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+}

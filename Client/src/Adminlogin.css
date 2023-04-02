@@ -1,0 +1,281 @@
+.area h1{
+    text-align: center;
+    color: #8f94fb;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    font-size: 35px;
+}
+.box123{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+    top: 30%;
+    left: 38%;
+    position: absolute;
+    animation-name: box;
+    animation-duration:5s;
+    transition: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes box {
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    75%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+.box123::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 420px;
+    width: 380px;
+    background: linear-gradient(0deg,transparent,#8f94fb);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+.box123::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 420px;
+    width: 380px;
+    background: linear-gradient(0deg,transparent,#8f94fb);
+    animation: animated 6s linear infinite;
+    transform-origin: bottom right;
+}
+@keyframes animated {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes aniime {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.fo{
+    position: absolute;
+    inset: 4px;
+    border-radius: 8px;
+    background-color:#1c1c1c;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.fo h2{
+    color: #8f94fb;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 23px;
+}
+.area{
+    background: #000000;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    z-index:-1;
+}
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    border: 3px solid rgb(9, 241, 191);
+    border-radius: 50%;
+}
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    border-radius: 50%;
+    border: 3px solid rgb(253, 152, 20);
+}
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+    border: 3px solid rgb(9, 187, 241);
+}
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+    border: 3px solid blue;
+}
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    border: 3px solid red;
+    border-radius: 50%;
+}
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+    border: 3px solid green;
+}
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+    border: 3px solid yellow;
+}
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+    border: 1px solid #fff;
+}
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    border: 3px solid rgb(172, 240, 14);
+}
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+    border: 3px solid rgb(244, 165, 7);
+}
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+.inputbox123{
+    width: 300px;
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+.inputbox123 input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 14px;
+    z-index: 10;
+}
+.inputbox123 input::placeholder{
+    color: #1c1c1c;
+}
+.inputbox123 span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1em;
+    color: #8f8f8f;
+    transition: 1s;
+    pointer-events: none;
+    padding: 20px 10px 10px;
+    text-align: center;
+}
+.inputbox123 i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #8f94fb;
+    border-radius: 4px;
+    transition: 1s;
+    pointer-events: none;
+    z-index: 9;
+
+}
+.inputbox123 input:valid ~ i,
+.inputbox123 input:focus ~ i{
+    height: 44px;
+}
+.inputbox123 input:valid ~ span,
+.inputbox123 input:focus ~ span{
+    color: #8f94fb;
+    transform: translateY(-37px);
+}
+.subm{
+    border: none;
+    outline: none;
+    background: #8f94fb;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.subm:active{
+    opacity: 0.8;
+}
+

@@ -1,0 +1,26 @@
+.navbar{
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 3px 8px 3px rgba(0, 0, 0,0.5);
+}
+:root{
+    --primary:rgb(3, 9, 95);
+}
+.ul{
+    display:flex;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: right;
+    text-decoration: none;
+    list-style: none;
+}
+.ul li{
+    padding: 10px 15px;
+    color: var(--primary);
+    font-size: 20px;
+}

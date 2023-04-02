@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="autocheck.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css">
+    <script src="https://unpkg.com/pdfjs-dist/build/pdf.min.js"></script>
+<script src="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js"></script>
+    <script src="AC.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <i class="fas fa-shield-alt" id="i"></i>
+            <div class="input">
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter the name" id="contact-name" onkeyup="validateName()" name="UserName">
+                <span id="name-error"></span>
+            </div>
+            <div class="input">
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter the Email" id="contact-email" onkeyup="validateEmail()" name="UserEmail">
+                <span id="Email-error"></span>
+            </div>
+            <div class="input">
+                <label for="">Phone Number</label>
+                <input type="text" placeholder="Enter the Number" id="contact-phone" onkeyup="validatePhone()" minlength="10" name="UserPassword">
+                <span id="phone-error"></span>
+            </div>
+            <div class="input">
+                <label for="">Message</label>
+                <textarea name="" id="" cols="30" rows="10" id="contact-message" onkeyup="validateMessage()" name="UserTextArea"></textarea>
+                <span id="message-error"></span>
+            </div>
+            <button id="but" onclick="return validateForm()">Submit</button>
+            <span id="submit-error" class="msg"></span>
+        </form>
+    </div>
+    <script>
+        var nameError = document.getElementById("name-error");
+        var EmailError = document.getElementById("Email-error");
+        var phoneError = document.getElementById("phone-error");
+        var MessageError = document.getElementById("message-error");
+        var SubmitError = document.getElementById("submit-error");
+
+        function validateName()
+        {
+            var FullName =document.getElementById("contact-name").value;
+            if(FullName.length==0)
+            {
+                nameError.innerHTML="Enter your Name";
+                return false;
+            }
+            if(!FullName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/))
+            {
+            
+                nameError.innerHTML="Enter your Full Name";
+                
+                return false;
+            }
+            nameError.innerHTML='<i class="fas fa-check-circle"></i>';
+            return true;
+        }
+        function validateEmail()
+        {
+            var FullEmail=document.getElementById("contact-email").value;
+            if(FullEmail.length==0)
+            {
+                EmailError.innerHTML="Enter the Email";
+                return false;
+            }
+            if(!FullEmail.match(/^[A-Za-z]*[0-9]*[@][A-Za-z]*[\.][A-Za-z]*$/))
+            {
+                EmailError.innerHTML="enter email form";
+                return false;
+            }
+            EmailError.innerHTML='<i class="fas fa-check-circle"></i>';
+            return true;
+        }
+        function validatePhone()
+        {
+            var Phone = document.getElementById("contact-phone").value;
+            if(Phone.length==0)
+            {
+                phoneError.innerHTML="Enter your phone no";
+                return false;
+            }
+            if(!Phone.match(/^[0-9]*$/)){
+                phoneError.innerHTML="enter digit only";
+                return false;
+            }
+            if(Phone.length==10)
+            {
+                phoneError.innerHTML='<i class="fas fa-check-circle"></i>';
+                return true;
+            }
+        }
+        function validateMessage()
+        {
+            var FullMessage = document.getElementById("contact-message").value;
+            if(FullMessage.length==0)
+            {
+                MessageError.innerHTML="Enter the message";
+                return false;
+            }
+            var required = 30;
+            var left = required-FullMessage.length;
+            if(left>0)
+            {
+                MessageError.innerHTML=left+"Enter more";
+                return false;
+            }
+            MessageError.innerHTML='<i class="fas fa-check-circle"></i>';
+        }
+        function validateForm()
+        {
+            if(!validateName() || !validateEmail() || ! validateMessage() || !validatePhone())
+            {
+                
+                SubmitError.innerHTML="Please fill all the details";
+                SubmitError.style.display='block';
+                setTimeout(function()
+                {
+                    SubmitError.style.display='none';
+                },3000)
+                return false;
+            }
+            else
+            {
+                alert("Thank you");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
